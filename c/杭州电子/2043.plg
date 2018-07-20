@@ -1,0 +1,26 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: 2043 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\user\AppData\Local\Temp\RSP2569.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/2043.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"I:\DEV-CPP\杭州电子\2043.c"
+]
+Creating command line "cl.exe @C:\Users\user\AppData\Local\Temp\RSP2569.tmp" 
+<h3>Output Window</h3>
+Compiling...
+2043.c
+I:\DEV-CPP\杭州电子\2043.c(12) : warning C4013: 'strlen' undefined; assuming extern returning int
+
+
+
+<h3>Results</h3>
+2043.obj - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+    int i;
+    double d;
+    
+    scanf("%d",&i);
+    swtich(i)
+    {
+      case 1:d=i*0.1;break;
+      case 2:d=(i-10000)*0.075+1000;break;
+    }
+    printf("%d",d);
+}

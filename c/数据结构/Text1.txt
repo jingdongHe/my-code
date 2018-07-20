@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<stdlib.h>
+typedef struct node {
+	int number;
+	node *next;
+}node;
+void insert(node *p)
+{
+	node *temp=(node *)malloc(sizeof(node));
+	temp->next=NULL;
+	scanf("%d",&temp->number);
+	p->next=temp;
+	p=temp;
+	return ;
+}
+void print(node *head)
+{
+	node *temp=head;
+	while(temp->next!=NULL)
+	{
+		printf("%d->",temp->number);
+		temp=temp->next;
+	}
+	printf("%d\n",temp->number);
+	return;
+}
+int main()
+{
+	node *head,*p;
+	head=(node *)malloc(sizeof(node));
+	head->next=NULL;head->number=0;
+	p=head;
+	insert(p);
+	insert(p);
+	insert(p);
+	print(head);
+	return 0;
+}

@@ -1,0 +1,34 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: 3 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\user\AppData\Local\Temp\RSP6877.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/3.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Users\user\Desktop\蓝桥杯\2010\决赛\5.c"
+]
+Creating command line "cl.exe @C:\Users\user\AppData\Local\Temp\RSP6877.tmp" 
+<h3>Output Window</h3>
+Compiling...
+5.c
+C:\Users\user\Desktop\蓝桥杯\2010\决赛\5.c(12) : error C2018: unknown character '0xa3'
+C:\Users\user\Desktop\蓝桥杯\2010\决赛\5.c(12) : error C2018: unknown character '0xa8'
+C:\Users\user\Desktop\蓝桥杯\2010\决赛\5.c(12) : error C2065: '___________' : undeclared identifier
+C:\Users\user\Desktop\蓝桥杯\2010\决赛\5.c(12) : error C2143: syntax error : missing ';' before 'constant'
+C:\Users\user\Desktop\蓝桥杯\2010\决赛\5.c(12) : error C2018: unknown character '0xa3'
+C:\Users\user\Desktop\蓝桥杯\2010\决赛\5.c(12) : error C2018: unknown character '0xa9'
+C:\Users\user\Desktop\蓝桥杯\2010\决赛\5.c(12) : error C2146: syntax error : missing ';' before identifier '____________'
+C:\Users\user\Desktop\蓝桥杯\2010\决赛\5.c(12) : error C2065: '____________' : undeclared identifier
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+5.obj - 8 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

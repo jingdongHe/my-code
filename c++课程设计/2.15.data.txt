@@ -1,0 +1,12 @@
+The name is 1
+1 locat in 1
+the phone is 1
+the stress number is 1
+The name is 2
+2 locat in 2
+the phone is 2
+the stress number is 2
+The name is 3
+3 locat in 5
+the phone is 5
+the stress number is 5

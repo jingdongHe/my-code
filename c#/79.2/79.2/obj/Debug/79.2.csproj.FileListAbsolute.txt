@@ -1,0 +1,5 @@
+C:\Users\Administrator\Desktop\c#\79.2\79.2\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\c#\79.2\79.2\bin\Debug\79.2.exe
+C:\Users\Administrator\Desktop\c#\79.2\79.2\bin\Debug\79.2.pdb
+C:\Users\Administrator\Desktop\c#\79.2\79.2\obj\Debug\79.2.exe
+C:\Users\Administrator\Desktop\c#\79.2\79.2\obj\Debug\79.2.pdb

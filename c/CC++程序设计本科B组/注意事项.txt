@@ -1,0 +1,5 @@
+以下3个网页中其中有一个有详细解答
+另求第四题：求黄金分割数的思路
+http://blog.csdn.net/keepthinking_/article/details/8947014
+http://blog.csdn.net/yibcs/article/details/8888238
+http://blog.csdn.net/keepthinking_/article/details/8984424

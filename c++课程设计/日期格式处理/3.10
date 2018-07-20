@@ -1,0 +1,352 @@
+#include <stdlib.h>
+#include<string.h>
+#include<stdio.h>
+#include <iostream.h>
+#include<time.h>
+
+class DateFormatter {
+private:
+	int day;
+	int mon;
+	int year;
+public:
+	//获取当地时间
+	DateFormatter() {
+		const time_t curr = time(0);
+		tm *dt = localtime(&curr);
+		this->day = dt->tm_mday;
+		this->mon = dt->tm_mon;
+		this->year = (dt->tm_year+1900);
+	}
+	//定义时间
+	DateFormatter(int day,int mon,int year) {
+		this->day = day;
+		this->mon = mon;
+		this->year = year;
+	}
+	//从字符串中得出一个日期
+	DateFormatter(char* date) {
+		if(strlen(date) > 8) {
+			string s1 = date;
+			int p = s1.find_first_of('-');
+			string day;
+			string month;
+			string year;
+			if(p == 2) {
+				day = s1.substr(0,2);
+				month = s1.substr(3,3);
+				year = s1.substr(7,4);
+			}
+			else if(p==1)
+			{
+				day = s1.substr(0,1);
+				month = s1.substr(2,3);
+				year = s1.substr(6,4);
+			}
+			char cday[5];
+			strcpy(cday,day.c_str());
+			char cyear[5];
+			strcpy(cyear,year.c_str());
+			this->day = atoi(cday);
+			this->mon = FindMonthInNumber(month);
+			this->year = atoi(cyear);
+		}
+		else if(strlen(date) == 8 || strlen(date) == 7 || strlen(date) == 6)
+		{
+			int len = strlen(date);
+			string str = date;
+			string day;
+			string month;
+			string year;
+			int p1 = str.find_first_of('-');
+			if(p1 <= 0) p1 = str.find_first_of('/');
+			int p2 = str.find_last_of('-');
+			if(p2 <= 0) p2 = str.find_last_of('/');
+			if(len == 8) 
+			{
+				day = str.substr(0,2);
+				month = str.substr(3,2);
+				year = str.substr(6,2);
+			}
+			else if(len == 7) 
+			{
+				if(p1 == 1) 
+				{
+					day = str.substr(0,1);
+					if(p2 == 3)
+					{
+						month = str.substr(2,1);
+						year = str.substr(4,2);
+					}
+					else 
+					{
+						month = str.substr(2,2);
+						year = str.substr(5,2);
+					}
+				}
+				else
+				{
+					day = str.substr(0,2);
+					if(p2 == 3) {
+						month = str.substr(2,1);
+						year = str.substr(4,2);
+					}
+					else 
+					{
+						month = str.substr(3,2);
+						year = str.substr(5,2);
+					}
+				}		  
+			}
+			else if(len == 6) 
+			{
+				day = str.substr(0,1);
+				month = str.substr(2,1);
+				year = str.substr(4,2);
+			}
+			int m = atoi((month.c_str()));
+			m -= 1;
+			int yr = atoi((year.c_str()));
+			char y[5];
+			if(yr >= 0 && yr <= 70) 
+			{
+				strcpy(y,"20");
+				strcat(y,year.c_str());
+			} 
+			else 
+			{
+				strcpy(y,"19");
+				strcat(y,year.c_str());
+			}
+			this->day = atoi((day.c_str()));
+			this->mon = m;
+			this->year = atoi(y);
+		}
+	}
+	//从英文字母变数字（月份）
+	int FindMonthInNumber(string m) {
+		if(to_lower(m)=="jan") {
+			return 0;
+		}else if(to_lower(m)=="feb") {
+			return 1;
+		}else if(to_lower(m)=="mar") {
+			return 2;
+		}else if(to_lower(m)=="apr") {
+			return 3;
+		}else if(to_lower(m)=="may") {
+			return 4;
+		}else if(to_lower(m)=="jun") {
+			return 5;
+		}else if(to_lower(m)=="jul") {
+			return 6;
+		}else if(to_lower(m)=="aug") {
+			return 7;
+		}else if(to_lower(m)=="sep") {
+			return 8;
+		}else if(to_lower(m)=="oct") {
+			return 9;
+		}else if(to_lower(m)=="nov") {
+			return 10;
+		}else if(to_lower(m)=="dec") {
+			return 11;
+		}else {
+			return -1;
+		}
+	}
+	//大写变小写
+	string to_lower(string s) {
+		int len = s.length();
+		for(int i=0;i<len;i++) {
+			if(s[i] >= 'A' && s[i] <= 'Z') {
+				s[i] = tolower(s[i]);
+			}
+		}
+		return s;
+	}
+	//数字转字符串
+	char* GetDate() {
+		char* d = new char[25];
+		char* m = new char[5];
+		char* y = new char[5];
+		//讲数字转换为字符串
+		d = itoa(day,d,10);
+		m = itoa((mon+1),m,10);
+		y = itoa(year,y,10);
+		//链接字符串
+		strcat(d,"/");
+		strcat(d,m);
+		strcat(d,"/");
+		strcat(d,y);
+		char ret[25];
+		strcpy(ret,d);
+		delete[] d;
+		delete[] m;
+		delete[] y;
+		return ret;
+	}
+	//标准化
+	char* GetFormattedDate() {
+		char mn[5];
+		strcpy(mn,FindMonth(mon));
+		char ret[25];
+		strcpy(ret,FormatDate(day,mn,year));
+		return ret;
+	}
+	//增加日期，判断是否输入有误
+	void AddDays(int days) {
+		if(days <= 0) return;
+		int curr_day = this->day;
+		int curr_mon = this->mon;
+		int days_in_mon = FindDaysInMonth(curr_mon);
+		if(this->mon == 11 && days_in_mon == curr_day) {
+			this->year++;
+		}
+		if(days_in_mon == curr_day) {
+			this->mon++;
+			if(this->mon > 11) {
+				this->mon = 0;
+			}
+		}
+		if(days <= days_in_mon) {
+			this->day += days;
+			if(this->day > days_in_mon) {
+				this->day = 1;
+			}
+			return;
+		}else {
+			int days_to_add = days_in_mon - curr_day;
+			this->day += days_to_add;
+			if(this->day > days_in_mon) {
+				this->day = 1;
+			}
+			int rem_days = days - days_to_add;
+			AddDays(rem_days);
+			return;
+		}
+	}
+	//月份增加
+	void IncrementMonth() {
+		mon++;
+		if(mon > 11) {
+			mon = 0;
+			year++;
+		}
+	}
+	//找到不同的月份
+	int FindDifferenceInMonths(DateFormatter dft) {
+		int diff = 0;
+		if(dft > *this) {
+			return -1;
+		}else if(dft == *this) {
+			return 0;
+		}else {
+			while(1) {
+				dft.IncrementMonth();
+				diff++;
+				if((dft.GetYear() == this->year) && (dft.GetMonth() == this->mon)) {
+					break;
+				}
+			}
+		}
+		if(this->GetDay() < dft.GetDay()) {
+			diff--;
+		}
+		return diff;
+	}
+	//找到不同的天数
+	int FindDifferenceInDays(DateFormatter dft) {
+		if(*this < dft) {
+			return -1;
+		}else if(*this == dft) {
+			return 0;
+		}else {
+			int ret = 0;
+			while(1) {
+				if(dft == *this) {
+					break;
+				}
+				dft.AddDays(1);
+				ret++;
+			}
+			return ret;
+		}
+	}
+	//重载运算符
+	int DateFormatter::operator < (DateFormatter df) {
+		if(df.year > this->year) {
+			return 1;
+		}else if(df.year == this->year && df.mon > this->mon) {
+			return 1;
+		}else if(df.mon == this->mon && df.day > this->day) {
+			return 1;
+		}else {
+			return 0;
+		}
+	}
+
+	int DateFormatter::operator > (DateFormatter df) {
+		if(df.year < this->year) {
+			return 1;
+		}else if(df.year == this->year && df.mon < this->mon) {
+			return 1;
+		}else if(df.mon == this->mon && df.day < this->day) {
+			return 1;
+		}else {
+			return 0;
+		}
+	}
+
+	int DateFormatter::operator == (DateFormatter df) {
+		if( (df.year == this->year)
+			&& (df.mon == this->mon) && (df.day == this->day)) {
+			return 1;
+		}else {
+			return 0;
+		}
+	}
+};
+
+int main() {
+	
+	//Dateformatter class supports 2 formats of dates :- DD-MON-YYYY & DD/MM/YY
+	DateFormatter dft1("1-MAR-2001");
+	DateFormatter dft2("15/4/02");
+	char tmp[25];
+
+	//Prints First & second dates
+	strcpy(tmp,dft1.GetFormattedDate());
+	cout<<"First date : "<<tmp<<endl;
+	strcpy(tmp,dft2.GetFormattedDate());
+	cout<<"Second date: "<<tmp<<endl;
+	
+	//Prints difference in days
+	cout<<"Diif in days: "<<dft2.FindDifferenceInDays(dft1)<<endl;
+	//Prints difference in months
+	cout<<"Diif in months: "<<dft2.FindDifferenceInMonths(dft1)<<endl;
+exit(0);
+	//Prints current date
+	strcpy(tmp,dft1.Today());
+	cout<<"Today is: "<<tmp<<endl;
+
+	//Adds 35 days to dft2
+	dft2.AddDays(35);
+		
+	//& prints its current value in the format DD-MON-YYYY
+	strcpy(tmp,dft2.GetFormattedDate());
+	cout<<"Added 35 days to date 2: "<<tmp<<endl;
+
+	//Increments dft1 by 1 month
+	dft1.IncrementMonth();
+
+	//& prints its current value in the format DD/MM/YY
+	strcpy(tmp,dft1.GetDate());
+	cout<<"Incremented first date's month: "<<tmp<<endl;
+
+	//Performs comparison operations on the two DateFormatter objects
+	//& prints result
+	cout<<"Date1 < Date2: "<<(dft1 < dft2)<<endl;
+	cout<<"Date1 == Date2: "<<(dft1 == dft2)<<endl;
+	cout<<"Date1 > Date2: "<<(dft1 > dft2)<<endl;
+	
+	return 0;
+}

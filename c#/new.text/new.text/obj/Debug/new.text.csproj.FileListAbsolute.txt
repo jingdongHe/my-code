@@ -1,0 +1,5 @@
+C:\Users\Administrator\Desktop\c#\new.text\new.text\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\c#\new.text\new.text\bin\Debug\new.text.exe
+C:\Users\Administrator\Desktop\c#\new.text\new.text\bin\Debug\new.text.pdb
+C:\Users\Administrator\Desktop\c#\new.text\new.text\obj\Debug\new.text.exe
+C:\Users\Administrator\Desktop\c#\new.text\new.text\obj\Debug\new.text.pdb

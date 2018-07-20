@@ -1,0 +1,42 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: 1010 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\user\AppData\Local\Temp\RSPB57D.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/1010.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\c\杭州电子\1026.c"
+]
+Creating command line "cl.exe @C:\Users\user\AppData\Local\Temp\RSPB57D.tmp" 
+Creating temporary file "C:\Users\user\AppData\Local\Temp\RSPB57E.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/1010.pdb" /debug /machine:I386 /out:"Debug/1010.exe" /pdbtype:sept 
+".\Debug\1026.obj"
+]
+Creating command line "link.exe @C:\Users\user\AppData\Local\Temp\RSPB57E.tmp"
+<h3>Output Window</h3>
+Compiling...
+1026.c
+D:\c\杭州电子\1026.c(34) : error C2224: left of '.x' must have struct/union type
+D:\c\杭州电子\1026.c(34) : error C2223: left of '->y' must point to struct/union
+D:\c\杭州电子\1026.c(53) : error C2082: redefinition of formal parameter 'a'
+D:\c\杭州电子\1026.c(54) : warning C4047: '>' : 'int ' differs in levels of indirection from 'struct stack *'
+D:\c\杭州电子\1026.c(63) : warning C4047: '=' : 'char (*)[100]' differs in levels of indirection from 'struct node *'
+D:\c\杭州电子\1026.c(63) : error C2223: left of '->x' must point to struct/union
+D:\c\杭州电子\1026.c(63) : error C2223: left of '->y' must point to struct/union
+D:\c\杭州电子\1026.c(63) : warning C4047: 'function' : 'struct node *' differs in levels of indirection from 'char (*)[100]'
+D:\c\杭州电子\1026.c(63) : warning C4024: 'push' : different types for formal and actual parameter 2
+D:\c\杭州电子\1026.c(81) : warning C4013: 'output' undefined; assuming extern returning int
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+1010.exe - 5 error(s), 5 warning(s)
+</pre>
+</body>
+</html>

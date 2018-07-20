@@ -1,0 +1,31 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: p65_3.14 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\user\AppData\Local\Temp\RSPD1F3.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/p65_3.14.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"I:\数据结构\p66_3.17.c"
+]
+Creating command line "cl.exe @C:\Users\user\AppData\Local\Temp\RSPD1F3.tmp" 
+<h3>Output Window</h3>
+Compiling...
+p66_3.17.c
+I:\数据结构\p66_3.17.c(2) : error C2143: syntax error : missing ')' before 'constant'
+I:\数据结构\p66_3.17.c(2) : error C2143: syntax error : missing '{' before 'constant'
+I:\数据结构\p66_3.17.c(2) : error C2059: syntax error : '<Unknown>'
+I:\数据结构\p66_3.17.c(2) : error C2059: syntax error : ')'
+I:\数据结构\p66_3.17.c(13) : warning C4013: 'akm' undefined; assuming extern returning int
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+p66_3.17.obj - 4 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

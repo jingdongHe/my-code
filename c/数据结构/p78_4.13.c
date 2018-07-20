@@ -1,0 +1,59 @@
+#include<stdio.h>
+#include<string.h>
+#include<math.h>
+void main()
+{
+	char a[100]="ak123x456 17960?302gef4563";
+	//char a[100]="12356789";
+	int A[100]={'\0'},i,j=0,n,k,t;
+	//gets(a);
+	n=strlen(a);
+	for(i=0;i<n;i++)
+		printf("%c ",a[i]);
+	printf("\n");
+	for(i=0;i<n;i++)
+	{
+		k=0;
+		for(t=i;t<n;t++)
+		{
+			//printf("%d:%c....%c\n",t,a[t],a[t+1]);
+			if(a[t]-a[t+1]!=-1||a[t]<'0'||a[t]>'9'||a[t+1]<'0'||a[t+1]>'9')
+				break;
+			k=k*10+a[t]-48;
+		}
+		if(a[t]-a[t-1]==1)
+			k=k*10+a[t]-48;
+		i=t;
+		if(k>9)
+		{
+			A[j]=k;
+			j++;
+			printf("%d...\n",A[j-1]);
+		}
+	}
+	for(i=0;i<n;i++)
+	{
+		k=0;
+		for(t=i;t<=n+1;t++)
+		{
+			if(a[t]-a[t+1]!=1||a[t]<'0'||a[t]>'9'||a[t+1]<'0'||a[t+1]>'9')
+				break;
+			k=k*10+a[t]-48;
+		}
+		if(a[t]-a[t-1]==-1)
+			k=k*10+a[t]-48;
+		i=t;
+		if(k>9)
+		{
+			A[j]=k;
+			j++;
+		}
+	}
+	i=0;
+	printf("%d:\n",j);
+	while(A[i]!='\0')
+	{
+		printf("%d\n",A[i]);
+		i++;
+	}
+}

@@ -1,0 +1,32 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: priority_queue - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP45E6.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/priority_queue.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\c\Á·Ï°\priority_queue.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP45E6.tmp" 
+<h3>Output Window</h3>
+Compiling...
+priority_queue.cpp
+E:\c\Á·Ï°\priority_queue.cpp(21) : error C2923: 'priority_queue' : 'cmp' is invalid as template argument '#3', type expected
+        E:\c\Á·Ï°\priority_queue.cpp(15) : see declaration of 'cmp'
+E:\c\Á·Ï°\priority_queue.cpp(21) : error C2079: 'q' uses undefined class 'priority_queue<struct node,class std::vector<struct node,class std::allocator<struct node> >,int>'
+E:\c\Á·Ï°\priority_queue.cpp(25) : error C2228: left of '.push' must have class/struct/union type
+E:\c\Á·Ï°\priority_queue.cpp(28) : error C2228: left of '.empty' must have class/struct/union type
+E:\c\Á·Ï°\priority_queue.cpp(28) : fatal error C1903: unable to recover from previous error(s); stopping compilation
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+priority_queue.obj - 5 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

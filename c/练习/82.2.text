@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    int d;
+    char a,ch;
+    
+    scanf("%c",&a);
+    ch=a;
+    switch(ch)
+    {
+      case'a':d=1;break;
+      case'b':d=2;break;
+      case'c':d=3;break;
+    }
+    printf("%d",d);
+    return 0;
+}

@@ -1,0 +1,5 @@
+C:\Users\Administrator\Desktop\c#\kaoshitext\kaoshitext\bin\Debug\kaoshitext.exe
+C:\Users\Administrator\Desktop\c#\kaoshitext\kaoshitext\bin\Debug\kaoshitext.pdb
+C:\Users\Administrator\Desktop\c#\kaoshitext\kaoshitext\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\c#\kaoshitext\kaoshitext\obj\Debug\kaoshitext.exe
+C:\Users\Administrator\Desktop\c#\kaoshitext\kaoshitext\obj\Debug\kaoshitext.pdb

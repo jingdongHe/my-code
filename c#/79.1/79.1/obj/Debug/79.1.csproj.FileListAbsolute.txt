@@ -1,0 +1,5 @@
+C:\Users\Administrator\Desktop\c#\79.1\79.1\bin\Debug\79.1.exe
+C:\Users\Administrator\Desktop\c#\79.1\79.1\bin\Debug\79.1.pdb
+C:\Users\Administrator\Desktop\c#\79.1\79.1\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\c#\79.1\79.1\obj\Debug\79.1.exe
+C:\Users\Administrator\Desktop\c#\79.1\79.1\obj\Debug\79.1.pdb

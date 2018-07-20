@@ -1,0 +1,27 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: p149-uva11077 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPB25B.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/p149-uva11077.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\c\Ëã·¨\p149-uva11077.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPB25B.tmp" 
+<h3>Output Window</h3>
+Compiling...
+p149-uva11077.cpp
+e:\c\Ëã·¨\p149-uva11077.cpp(6) : error C2632: 'long' followed by 'long' is illegal
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+p149-uva11077.obj - 1 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

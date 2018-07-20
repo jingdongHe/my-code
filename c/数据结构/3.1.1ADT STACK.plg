@@ -1,0 +1,38 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: 3.1.1ADT STACK - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\user\AppData\Local\Temp\RSP9797.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/3.1.1ADT STACK.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"I:\数据结构\3.1.1ADT STACK.c"
+]
+Creating command line "cl.exe @C:\Users\user\AppData\Local\Temp\RSP9797.tmp" 
+<h3>Output Window</h3>
+Compiling...
+3.1.1ADT STACK.c
+I:\数据结构\3.1.1ADT STACK.c(44) : error C2146: syntax error : missing ')' before identifier 's'
+I:\数据结构\3.1.1ADT STACK.c(44) : error C2061: syntax error : identifier 's'
+I:\数据结构\3.1.1ADT STACK.c(44) : error C2059: syntax error : ';'
+I:\数据结构\3.1.1ADT STACK.c(44) : error C2059: syntax error : ')'
+I:\数据结构\3.1.1ADT STACK.c(45) : error C2449: found '{' at file scope (missing function header?)
+I:\数据结构\3.1.1ADT STACK.c(49) : error C2059: syntax error : '}'
+I:\数据结构\3.1.1ADT STACK.c(54) : error C2146: syntax error : missing ')' before identifier 's'
+I:\数据结构\3.1.1ADT STACK.c(54) : error C2061: syntax error : identifier 's'
+I:\数据结构\3.1.1ADT STACK.c(54) : error C2059: syntax error : ';'
+I:\数据结构\3.1.1ADT STACK.c(54) : error C2059: syntax error : ')'
+I:\数据结构\3.1.1ADT STACK.c(55) : error C2449: found '{' at file scope (missing function header?)
+I:\数据结构\3.1.1ADT STACK.c(57) : error C2059: syntax error : '}'
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+3.1.1ADT STACK.obj - 12 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

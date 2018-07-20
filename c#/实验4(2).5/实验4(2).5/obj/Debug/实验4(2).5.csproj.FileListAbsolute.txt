@@ -1,0 +1,5 @@
+C:\Users\Administrator\Desktop\c#\实验4(2).5\实验4(2).5\bin\Debug\实验4(2).5.exe
+C:\Users\Administrator\Desktop\c#\实验4(2).5\实验4(2).5\bin\Debug\实验4(2).5.pdb
+C:\Users\Administrator\Desktop\c#\实验4(2).5\实验4(2).5\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\c#\实验4(2).5\实验4(2).5\obj\Debug\实验4(2).5.exe
+C:\Users\Administrator\Desktop\c#\实验4(2).5\实验4(2).5\obj\Debug\实验4(2).5.pdb

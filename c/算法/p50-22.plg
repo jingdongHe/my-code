@@ -1,0 +1,29 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: p50-22 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPB561.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/p50-22.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\c\算法\p50-22.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPB561.tmp" 
+<h3>Output Window</h3>
+Compiling...
+p50-22.cpp
+E:\c\算法\p50-22.cpp(43) : error C2065: 'up' : undeclared identifier
+E:\c\算法\p50-22.cpp(43) : error C2109: subscript requires array or pointer type
+E:\c\算法\p50-22.cpp(43) : error C2109: subscript requires array or pointer type
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+p50-22.obj - 3 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

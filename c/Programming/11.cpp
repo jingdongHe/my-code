@@ -1,0 +1,89 @@
+#include<stdio.h>
+#include<time.h>
+#include<math.h>
+#include<stdlib.h>
+void main()
+{
+	int i=0,d,x,y,z,k,f=0;
+	srand((unsigned)time(0));
+	while(i<10)
+	{
+		
+		x=rand()%50;
+		y=rand()%50;
+		z=rand()%2;
+		if(z==0)
+		{
+			if(x+y>50)
+				continue;
+			printf("第%d题:\n",i+1);
+			i++;
+			printf("请输入%d+%d的答案\n%d+%d=",x,y,x,y);
+			scanf("%d",&k);getchar();
+			d=0;
+			while(k!=x+y)
+			{
+				if(d==0)
+					printf("你还有2次机会,请再次输入\n");
+				if(d==1)
+					printf("你还有1次机会,请再次输入\n");
+				if(d==2)
+				{printf("很可惜，这题你不得分\n");break;}
+				d++;
+				printf("请输入%d+%d的答案\n%d+%d=",x,y,x,y);
+				scanf("%d",&k);getchar();
+			}
+			if(k==x+y)
+			{
+				if(d==0)
+					f+=10;
+				if(d==1)
+					f+=7;
+				if(d==2)
+					f+=5;
+			}
+		}
+		else
+		{
+			if(abs(x-y)<0)
+				continue;
+			printf("第%d题:\n",i+1);
+			i++;
+			if(x<y){d=x;x=y;y=d;}
+			printf("请输入%d-%d的答案\n%d-%d=",x,y,x,y);
+			scanf("%d",&k);getchar();
+			d=0;
+			while(k!=x-y)
+			{
+				if(d==0)
+					printf("你还有2次机会,请再次输入\n");
+				if(d==1)
+					printf("你还有1次机会,请再次输入\n");
+				if(d==2)
+				{printf("很可惜，这题你不得分\n");break;}
+				d++;
+				printf("请输入%d-%d的答案\n%d-%d=",x,y,x,y);
+				scanf("%d",&k);getchar();
+			}
+			if(k==x-y)
+			{
+				if(d==0)
+					f+=10;
+				if(d==1)
+					f+=7;
+				if(d==2)
+					f+=5;
+			}
+		}
+	}
+	if(f>=90)
+		printf("SMART\n");
+	if(f<90&&f>=80)
+		printf("GOOD\n");
+	if(f<80&&f>=70)
+		printf("OK\n");
+	if(f>=60&&f<70)
+		printf("PASS\n");
+	if(f<60)
+		printf("TRY AGAIN\n");
+}
